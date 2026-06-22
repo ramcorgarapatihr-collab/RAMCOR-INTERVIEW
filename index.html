@@ -184,7 +184,7 @@
 ========================================================= */
 
 const OWNER_PIN = "73194"; // change this PIN as needed, share only with owner/MD
-const SHEETS_URL = "https://script.google.com/macros/s/AKfycbz635D0bncwELsoK0WsIh3YciH4Oso472yde3-2PLYPsGRklM1jqMa246Am6NRMSNwJdA/exec";
+const SHEETS_URL = "https://script.google.com/macros/s/AKfycbyIuhkgVFBlcgn4LR2B6lZCwmPwWypzTdg_QwpYRzOZgw_oUc5vqWJV95uSQsVlDL5dIQ/exec";
 
 async function saveCandidateToSheet(candidateRecord) {
   // Apps Script web apps don't return readable CORS responses to fetch(),
@@ -205,7 +205,7 @@ async function saveCandidateToSheet(candidateRecord) {
       qaLog: candidateRecord.qaLog,
       id: candidateRecord.id,
       aiFailureCount: candidateRecord.aiFailureCount,
-      photo: "",
+      photo: candidateRecord.photo || "",
       copyFlag: candidateRecord.copyFlag || "",
       styleFlag: candidateRecord.styleFlag || "",
       location: candidateRecord.location || ""
